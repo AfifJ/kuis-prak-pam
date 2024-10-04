@@ -24,7 +24,7 @@ class HelpPage extends StatelessWidget {
                         'customerService.png',
                         height: 200,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       )
                     ]),
