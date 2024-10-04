@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kuis_barang_1/screens/help_page.dart';
-import 'package:kuis_barang_1/screens/home_page.dart';
 import 'package:kuis_barang_1/screens/login_page.dart';
 
 void main() {

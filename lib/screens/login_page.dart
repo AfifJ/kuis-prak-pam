@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kuis_barang_1/screens/home_page.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -28,9 +28,9 @@ class _LoginPageState extends State<LoginPage> {
               builder: (context) =>
                   HomePage(username: _usernameController.text)));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text("Username atau password salah"),
-        backgroundColor: const Color.fromARGB(255, 146, 27, 27),
+        backgroundColor: Color.fromARGB(255, 146, 27, 27),
       ));
     }
   }
@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 42,
             ),
-            Container(height: 150, child: Image.asset('upnLogo.png')),
+            SizedBox(height: 150, child: Image.asset('upnLogo.png')),
             const SizedBox(
               height: 24,
             ),
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             TextField(
               controller: _usernameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   label: Text("Username"), border: OutlineInputBorder()),
             ),
             const SizedBox(
@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     child: TextButton(
 
                         // style: ButtonStyle(backgroundColor: Colors.green),
@@ -96,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         style: ButtonStyle(
                             foregroundColor:
-                                WidgetStatePropertyAll(Colors.white),
+                                const WidgetStatePropertyAll(Colors.white),
                             backgroundColor:
                                 WidgetStatePropertyAll(Colors.green[800])),
                         child: const Text(

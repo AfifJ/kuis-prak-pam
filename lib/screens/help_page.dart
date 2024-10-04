@@ -8,25 +8,36 @@ class HelpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Bantuan dan Dukungan"),
+          title: const Text("Bantuan dan Dukungan"),
         ),
         body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
           child: ListView.builder(
             itemCount: helpItemList.length,
             itemBuilder: (context, index) {
               final help = helpItemList[index];
               return Column(
                 children: [
+                  if (index == 0)
+                    Column(children: [
+                      Image.asset(
+                        'customerService.png',
+                        height: 200,
+                      ),
+                      SizedBox(
+                        height: 40,
+                      )
+                    ]),
                   Text(
                     help.title,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                    style: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.w700),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Text(help.desc),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   )
                 ],
